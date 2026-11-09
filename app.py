@@ -6,7 +6,7 @@ if "i" not in st.session_state:
     st.session_state.i = 0
 
 st.title("Visor de imágenes")
-st.image(str(fotos[st.session_state.i]), use_container_width=True)
+st.image(str(fotos[st.session_state.i]), width="stretch")
 
 c1, c2 = st.columns(2)
 if c1.button("⬅ Anterior"):
