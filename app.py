@@ -2,7 +2,7 @@ import streamlit as st
 from pathlib import Path
 from PIL import Image
 
-carpeta = Path("imagenes")
+carpeta = Path("Imagenes")
 fotos = sorted(
     p for p in carpeta.glob("*")
     if p.suffix.lower() in (".jpg", ".jpeg")
@@ -17,7 +17,7 @@ def cargar(ruta):
 st.title("Visor de imágenes")
 
 if not fotos:
-    st.warning("No se encontraron imágenes en la carpeta 'imagenes'.")
+    st.warning("No se encontraron imágenes en la carpeta 'Imagenes'.")
     st.stop()
 
 if "i" not in st.session_state:
